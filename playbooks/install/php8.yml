@@ -1,0 +1,11 @@
+---
+- name: Install Asterisk and Dependencies on Ubuntu 22.04
+  hosts: targetservers
+  become: true
+  tasks:
+
+    - name: "Updating the repo"
+      apt: update_cache=yes
+
+    - name: Installation PHP 8.1
+      apt: name=php state=present
