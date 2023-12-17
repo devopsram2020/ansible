@@ -4,8 +4,5 @@
   become: true
   tasks:
 
-    - name: "Updating the repo"
-      apt: update_cache=yes
-
     - name: Installation PHP 8.1
       apt: name=php state=present
